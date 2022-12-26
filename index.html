@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<title>FormSubmit</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<h1>Contact Form</h1>
+			<form action="https://formsubmit.co/site.mercadolocal@gmail.com" method="POST">
+				<div class="row">		
+					<div class="col-md-6">
+						<label for="firstName">Nome</label>
+						<input name="name" type="text" class="form-control" id="firstName" required>
+					</div>
+					<div class="col-md-6">
+						<label for="lastName">Sobrenome</label>
+						<input name="lastname" type="text" class="form-control" id="lastName" required>
+					</div>
+					<div class="col-md-12">
+						<label for="emailinfo">Email</label>
+						<input name="email" type="text" class="form-control" id="emailinfo" required>
+					</div>
+					<div class="col-md-12">
+						<label for="Message">Message</label>
+						<textarea name="comments, questions" class="form-control" id="message" rows="10" style="width: 100%"></textarea>
+					</div>
+					<div class="col-md-12">
+						<br>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
+					
+				</div>		
+			</form>
+		</div>
+
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</body>
+</html>
