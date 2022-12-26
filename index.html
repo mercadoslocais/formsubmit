@@ -1,46 +1,1048 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
-		<title>FormSubmit</title>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Teste: Cadastros Typeform</title>
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	</head>
-	<body>
-		<div class="container">
-			<h1>Contact Form</h1>
-			<form action="https://formsubmit.co/site.mercadolocal@gmail.com" method="POST">
-				<div class="row">		
-					<div class="col-md-6">
-						<label for="firstName">Nome</label>
-						<input name="name" type="text" class="form-control" id="firstName" required>
-					</div>
-					<div class="col-md-6">
-						<label for="lastName">Sobrenome</label>
-						<input name="lastname" type="text" class="form-control" id="lastName" required>
-					</div>
-					<div class="col-md-12">
-						<label for="emailinfo">Email</label>
-						<input name="email" type="text" class="form-control" id="emailinfo" required>
-					</div>
-					<div class="col-md-12">
-						<label for="Message">Message</label>
-						<textarea name="comments, questions" class="form-control" id="message" rows="10" style="width: 100%"></textarea>
-					</div>
-					<div class="col-md-12">
-						<br>
-						<button type="submit" class="btn btn-primary">Submit</button>
-					</div>
-					
-				</div>		
-			</form>
-		</div>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="themes/pillar/css/theme-deeporange.css">
+		<link rel="stylesheet" href="themes/pillar/css/custom-iconsmind-embedded.css">
+		<link rel="stylesheet" href="themes/pillar/plugins/lightbox/css/lightbox.min.css">
+		<link rel="stylesheet" href="themes/pillar/css/custom.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700%7CMontserrat:400,700">
 
-		<!-- jQuery -->
-		<script src="//code.jquery.com/jquery.js"></script>
-		<!-- Bootstrap JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	</body>
+    <style>
+      section {
+        transition: opacity ease-in-out 1000ms;
+      }
+      .prev span, .next span {
+        font-weight: 700;
+      }
+      .horarios select {
+        margin-bottom: 0.625em;
+        height: 36px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .horarios {
+        transition: height ease-in-out 1500ms;
+      }
+      #card__demo .card {
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.075);
+      }
+    </style>
+	</head>
+	<body style="overflow: _hidden" class="bg--white" _data-reveal-selectors="section" _data-reveal-timing="1000" >
+
+    <div id="cadastro-estabelecimento" class="main-container">
+
+      <form class="form-email" data-form="estabelecimento" data-style="typeform">
+        <section id="sectionTop" class="height-100 imagebg image--light cover cover-8 cover-full" data-overlay="5">
+          <div class="background-image-holder">
+            <img src="img/banners/banner-form_960x960.02.jpg" alt="">
+          </div>
+          <div class="container pos-vertical-center-ever">
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="elements--title">
+                  <h2>Bora divulgar seu negócio no Ewbank Online?</h2>
+                </div>
+              </div>
+              <div class="col-sm-12 hidden">
+                <div class="elements-forms">
+                  <ul class="type--italic">
+                    <li>Estabelecimentos</li>
+                    <li>Consultórios</li>
+                    <li>Escritórios</li>
+                    <li>Fábricas...</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row pagination-container">           
+              <div class="col-xs-6">
+                <a href="#" class="btn next inner-link">
+                  <span class="btn__text strong">vamos começar <i class="iconsmind-Right"></i></span>
+                </a>
+              </div>
+
+            </div><!--end of row-->        
+          </div><!--end of container-->      
+        </section>
+
+        <section id="section0" class="height-100 cover cover-8 cover-full">
+          <div class="container pos-vertical-center-ever">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements--title">
+                  <h5>Quem é você?</h5>
+                </div>
+              </div>
+              <div class="col-sm-12">
+
+                <div class="elements-forms">
+                  <div class="input-with-icon form-group">
+                    <!-- <h5>Seu Nome</h5> -->
+                    <label for="i_Nome">Nome e sobrenome</label>
+                    <i class="iconsmind-MaleFemale"></i>
+                    <input type="text" id="i_Nome" name="name" class="validate-required" placeholder="Digite seu nome e sobrenome" alt="Campo para preencher o nome completo" title="Digite seu nome completo" maxlength="30">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row pagination-container">
+              <div class="col-xs-6">
+                <div class="col-xs-6">
+                  <a href="#" class="_btn prev inner-link">
+                    <span class="h6 _btn__text"><i class="iconsmind-Left"></i> início</span>
+                  </a>
+                </div>
+                <a href="#" class="_btn next inner-link">
+                  <span class="h6 _btn__text">próximo <i class="iconsmind-Right"></i></span>
+                </a>
+              </div>
+            </div><!--end of row-->        
+          </div><!--end of container-->      
+        </section>
+        
+        <section id="section1" class="height-100 cover cover-8 cover-full">
+          <div class="container pos-absolute pos-vertical-center-ever">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements--title">
+                  <h5>Email</h5>
+                </div>
+
+                <div class="elements-forms">
+                  <div class="input-with-icon form-group">
+                    <label for="Emails">Email</label>
+                    <i class="iconsmind-Mail"></i>
+                    <input type="email" id="i_Email" class="block" placeholder="Digite um email válido" alt="Campo para E-mail" title="Preencha corretamente o email" _style="width: 108%;">
+                    <h6 class="text-right px-2">&nbsp; Preencher este campo não é obrigatório &nbsp;</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row pagination-container">
+              <div class="col-xs-6">
+                <a href="#" class="_btn prev inner-link">
+                  <span class="h6 _btn__text"><i class="iconsmind-Left"></i> anterior</span>
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" class="_btn next inner-link">
+                  <span class="h6 _btn__text">próximo <i class="iconsmind-Right"></i></span>
+                </a>
+              </div>
+            </div><!--end of row-->        
+          </div><!--end of container-->      
+        </section>
+
+        <section id="section2" class="height-100 cover cover-8 cover-full">
+          <div class="container pos-absolute pos-vertical-center-ever">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements--title">
+                  <h5>Endereço</h5>
+                </div>
+              </div>
+              <div class="elements-forms">
+                <div class="form-group endereco">
+                  <div class="form-group col-xs-12">
+                    <label for="rua">Rua</label>
+                    <input id="rua" type="text" class="rua validate-required" placeholder="Rua, Avenida">
+                  </div>
+                  <div class="form-group col-xs-4">
+                    <label for="numero">Número</label>
+                    <input type="text" class="numero validate-required" placeholder="Nº" _style="width: 33.33333333%;">
+                  </div>
+                  <div class="form-group col-xs-8">
+                    <label for="complemento">Complementos</label>                    
+                    <input type="text" class="complemento" placeholder="Complementos: Bloco, Apto, etc...">
+                  </div>
+                  <div class="form-group col-xs-12">
+                    <label for="cidade">Bairro / Cidade</label>
+                    <input id="cidade" type="text" class="complemento" placeholder="Centro, Ewbank da Câmara - MG" readonly>
+                    <h6 class="text-right px-2">O campo Cidade não pode ser alterado</h6>
+                  </div>
+                  
+                  <input type="text" id="i_Endereco" name="Endereco" class="validate-required" style="display: none;">
+
+                </div>
+              </div>
+            </div>
+            <div class="row pagination-container">
+              <div class="col-xs-6">
+                <a href="#" class="_btn prev inner-link">
+                  <span class="h6 _btn__text"><i class="iconsmind-Left"></i> anterior</span>
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" class="_btn next inner-link">
+                  <span class="h6 _btn__text">próximo <i class="iconsmind-Right"></i> </span>
+                </a>
+              </div>
+            </div><!--end of row-->        
+          </div><!--end of container-->      
+        </section>
+
+        <section id="section3" class="height-100 cover cover-8 cover-full">
+          <div class="container pos-absolute pos-vertical-center-ever">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements--title">
+                  <h5>Contatos do estabelecimento</h5>
+                </div>
+              </div>
+            </div>
+            <!-- TELEFONE -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div id="t_options" class="radio-group options">
+                  
+                  <h5 class="h5">
+                    Possui telefone fixo?
+                  </h5> 
+
+                  <div class="col-xs-2 col-sm-1">
+                    <div class="input-radio CheckTel checked" data-name="tSim">
+                      <div class="inner"></div>
+                      <!-- <input type="radio" name="CheckTelPhone" value="sim" id="sim1"> -->
+                    </div>
+                    <br>
+                  </div>
+                  <div class="col-xs-4">
+                    <label for="sim1" class="mx-0">Sim</label>
+                    <br>
+                  </div>
+                  
+                  <div class="col-xs-2 col-sm-1">
+                    <div class="input-radio CheckTel" data-name="tNao">
+                      <div class="inner"></div>
+                      <!-- <input type="radio" name="CheckTelPhone" value="nao" id="nao1"> -->
+                    </div>
+                    <br>
+                  </div>
+                  <div class="col-xs-4">
+                    <label for="nao1" class="mx-0">Não</label>
+                    <br>
+                  </div>                    
+
+                </div>
+                
+              </div>
+              <div class="col-xs-12">
+                <div class="elements-forms">
+                  <!-- <input type="checkbox" name="CheckTel" id="CheckTelFixo" checked> -->
+                  <!-- <label for="CheckTelFixo">Possui Telefone Fixo?</label> -->                
+                  <span id="t_alert" class="h6 color--primary-2" style="display: none;">
+                    &nbsp; * Neste caso, o tefone é obrigatório!
+                  </span>
+                  <div class="input-with-icon form-group telefone">
+                    <i class="iconsmind-Phone-2"></i>
+                    <input type="tel" id="i_TelFixo" name="TelFixo" class="validate-required" placeholder="Número de telefone fixo" alt="Número de telefone fixo" title="Digite o Telefone fixo" _style="width: 100%;">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- WHATSAPP -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div id="w_options" class="radio-group options">
+                  
+                  <h5 class="">
+                    Possui contato de WhatsApp?
+                  </h5> 
+
+                  <div class="col-xs-2 col-sm-1">
+                    <div class="input-radio CheckTel checked"  data-name="wSim">
+                      <div class="inner"></div>
+                      <!-- <input type="radio" name="CheckTelWhats" value="sim" id="sim2"> -->
+                    </div>
+                    <br>
+                  </div>
+                  <div class="col-xs-4">
+                    <label for="sim2" class="mx-0">Sim</label>
+                    <br>
+                  </div>
+                  
+                  <div class="col-xs-2 col-sm-1">
+                    <div class="input-radio CheckTel"  data-name="wNao">
+                      <div class="inner"></div>
+                      <!-- <input type="radio" name="CheckTelWhats" value="nao" id="nao2"> -->
+                    </div>
+                    <br>
+                  </div>
+                  <div class="col-xs-4">
+                    <label for="nao2" class="mx-0">Não</label>
+                    <br>
+                  </div>                    
+
+                </div>
+                
+              </div>
+              <div class="col-xs-12">
+                <div class="elements-forms">
+                  <!-- <input type="checkbox" name="CheckTel" id="CheckTelFixo" checked> -->
+                  <!-- <label for="CheckTelFixo">Possui Telefone Fixo?</label> -->                
+                  <span id="w_alert" class="h6 color--primary-2" style="display: none;">
+                    &nbsp; * Neste caso, o WhatsApp é obrigatório!
+                  </span>
+                  <div class="input-with-icon form-group telefone">
+                    <i class="iconsmind-Whatsapp"></i>
+                    <input type="tel" id="i_TelCelular" name="TelCelular" class="validate-required" placeholder="Número WhatsApp profissional" alt="Número WhatsApp profissional" title="Digite o WhatsApp de atendimento" _style="width: 100%;">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row pagination-container"> 
+              <div class="col-xs-6">
+                <a href="#" class="_btn prev inner-link">
+                  <span class="h6 _btn__text"><i class="iconsmind-Left"></i> anterior</span>
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" class="_btn next inner-link">
+                  <span class="h6 _btn__text">próximo <i class="iconsmind-Right"></i></span>
+                </a>
+              </div>              
+            </div> <!-- end of row -->
+          </div><!--end of container-->      
+        </section>
+
+        <section id="section4" class="height-100 cover cover-8 cover-full" style="">
+          <div class="container pos-vertical-center-ever">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements--title">
+                  <h5>Nome do estabelecimento/empresa</h5>
+                </div>
+              </div>
+              <div class="col-sm-12">
+
+                <div class="elements-forms">
+                  <div class="input-with-icon form-group">
+                    <!-- <h5>Seu Nome</h5> -->
+                    <label for="Nomes">Nome social</label>
+                    <i class="iconsmind-Shop-3"></i>
+                    <input type="text" id="i_Nome_i" name="Nome_i" class="validate-required" placeholder="Nome do estabelecimento/empresa" alt="Campo para preencher o nome do estabelecimento" title="Digite o nome do estabelecimento" maxlength="30">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row pagination-container">
+              <div class="col-sm-12">
+                <div class="col-xs-6">
+                  <a href="#" class="_btn prev inner-link">
+                    <span class="h6 _btn__text"><i class="iconsmind-Left"></i> anterior</span>
+                  </a>
+                </div>
+                <div class="col-xs-6">
+                  <a href="#" class="_btn action-validate next inner-link">
+                    <span class="h6 _btn__text">próximo <i class="iconsmind-Right"></i></span>
+                  </a>
+                </div>
+              </div>
+            </div><!--end of row-->        
+          </div><!--end of container-->      
+        </section>
+
+        <section id="section5" class="height-100 cover cover-8 cover-full" style="">
+          <div class="container pos-vertical-center-ever">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements--title">
+                  <h5>Tipo de negócio</h5>
+                </div>
+              </div>
+              <div class="col-sm-12">
+
+                <div class="elements-forms">
+                  <div class="Categoria-Tipo form-group">
+                    <label for="i_Categoria-Tipo">Selecione a categoria do seu negócio </label>
+                    <select id="i_Categoria-Tipo" name="Categoria-Tipo" class="input-select validate-required" title="Escolha uma categoria" alt="Campo para preencher o tipo do estabelecimento" style="margin-bottom: 1.625em;">
+                      <option value="" readonly>Selecione</option>
+                      <option value="Padaria, Confeitaria" alt="Padaria, Confeitaria">Padaria, Confeitaria</option>
+                      <option value="Mercado, Mercearia" alt="Mercado, Mercearia">Mercado, Mercearia</option>
+                      <option value="Bar, Restaurante" alt="Bar, Restaurante">Bar, Restaurante</option>
+                      <option value="Farmárcia, Laboratório" alt="Farmárcia, Laboratório">Farmárcia, Laboratório</option>
+                      <option value="Papelaria, Diversos" alt="Papelaria, Diversos">Papelaria, Diversos</option>
+                      <option value="Comércio de Presentes" alt="Comércio de Presentes">Comércio de Presentes</option>
+                      <option value="Comércio de Beleza e Estética" alt="Comércio de Beleza e Estética">Comércio de Beleza e Estética</option>
+                      <option value="Comércio de Saúde e Bem Estar" alt="Comércio de Saúde e Bem Estar">Comércio de Saúde e Bem Estar</option>
+                      <option value="Comércio, Distribuidora" alt="Comércio, Distribuidora">Comércio, Distribuidora</option>
+                      <option value="Comércio de Entretenimento" alt="Comércio de Entretenimento">Comércio de Entretenimento</option>
+                      <option value="Comércio de Itens Domésticos" alt="Comércio de Itens Domésticos">Comércio de Itens Domésticos</option>
+                      <option value="Comércio da Construção" alt="Comércio da Construção">Comércio da Construção</option>
+                      <option value="Comércio de PetShop" alt="Comércio de PetShop">Comércio de PetShop</option>
+                      <option value="Comércio de Vestuário" alt="Comércio de Vestuário">Comércio de Vestuário</option>
+                      <option value="Comércio Automotivo de Suprimentos" alt="Comércio Automotivo de Suprimentos">Comércio Automotivo de Suprimentos</option>
+                      <option value="Comércio Automotivo de Manutenções" alt="Comércio Automotivo de Manutenções">Comércio Automotivo de Manutenções</option>
+                      <option value="Comércio, Outros" alt="Comércio, Outros">Comércio, Outros</option>
+                      <option value="Assistência técnica de equipamentos" alt="Assistência técnica de equipamentos">Assistência técnica de equipamentos</option>
+                      <option value="Consultório de especialidades" alt="Consultório de especialidades">Consultório de especialidades</option>
+                      <option value="Escritório de especialidades" alt="Escritório de especialidades">Escritório de especialidades</option>
+                      <option value="Instalações e Manutenções Domésticas" alt="Instalações e Manutenções Domésticas">Instalações e Manutenções Domésticas</option>
+                      <option value="Hotelaria e Turismo" alt="Hotelaria e Turismo">Hotelaria e Turismo</option>
+                      <option value="Transporte e Logística" alt="Transporte e Logística">Transporte e Logística</option>
+                      <option value="Suprimentos Industriais" alt="Suprimentos Industriais">Suprimentos Industriais</option>
+                    </select>
+                  </div>
+                  <div class="Categoria-Tipo2 form-group" style="display: none;">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row pagination-container">
+              <div class="col-xs-6">
+                <a href="#" class="_btn prev inner-link">
+                  <span class="h6 _btn__text"><i class="iconsmind-Left"></i> anterior</span>
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" class="_btn action-validate next inner-link">
+                  <span class="h6 _btn__text">próximo <i class="iconsmind-Right"></i></span>
+                </a>
+              </div>
+            </div><!--end of row-->        
+          </div><!--end of container-->      
+        </section>
+
+        <section id="section6" class="height-100 cover cover-8 cover-full" style="">
+          <div class="container pos-vertical-center-ever">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements--title">
+                  <h5>Formas de pagamento</h5>
+                  <h6><i class="iconsmind-Checkmark-Circle"></i> Marque todas que seu negócio aceita</h6>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements-forms">
+
+                  <input type="hidden" id="i_Pagtos" style="display: none;">
+                  
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="input-checkbox pagto">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="Dinheiro" id="Dinheiro">
+                      </div>
+                    </div>
+                    <div class="col-xs-10">
+                      <label class="h6 mx-0" for="Dinheiro"><i class="fa fa-dollar icon-left"></i> Dinheiro</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="input-checkbox pagto">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="CartaoCredito" id="CartaoCredito">
+                      </div>
+                    </div>
+                    <div class="col-xs-10">
+                      <label class="h6 mx-0" for="CartaoCredito"><i class="fa fa-credit-card icon-left"></i> Cartão de Crédito</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="input-checkbox pagto">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="CartaoDebito" id="CartaoDebito">
+                      </div>
+                    </div>
+                    <div class="col-xs-10">
+                      <label class="h6 mx-0" for="CartaoDebito"><i class="fa fa-credit-card fa-flip-horizontal icon-left"></i> Cartão de Débito</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="input-checkbox pagto">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="Pix" id="Pix">
+                      </div>
+                    </div>
+                    <div class="col-xs-10">
+                      <label class="h6 mx-0" for="Pix"><i class="icos-pix icon-left"></i> Pix</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="input-checkbox pagto">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="PicPay" id="PicPay">
+                      </div>
+                    </div>
+                    <div class="col-xs-10">
+                      <label class="h6 mx-0" for="PicPay"><i class="icos-picpay icon-left"></i> PicPay</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="input-checkbox pagto">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="MercadoPagoQRCode" id="MercadoPagoQRCode">
+                      </div>
+                    </div>
+                    <div class="col-xs-10">
+                      <label class="h6 mx-0" for="MercadoPagoQRCode"><i class="fa fa-qrcode icon-left"></i> MercadoPago QR Code</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-2">
+                      <div class="input-checkbox pagto">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="PagamentosOnline" id="PagamentosOnline">
+                      </div>
+                    </div>
+                    <div class="col-xs-10">
+                      <label class="h6 mx-0" for="PagamentosOnline"><i class="fa fa-paypal icon-left"></i> Pagamentos Online</label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>  
+            </div>
+
+            <div class="row pagination-container">
+              <div class="col-xs-6">
+                <a href="#" class="_btn prev inner-link">
+                  <span class="h6 _btn__text"><i class="iconsmind-Left"></i> anterior</span>
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" class="_btn action-validate next inner-link">
+                  <span class="h6 _btn__text">próximo <i class="iconsmind-Right"></i></span>
+                </a>
+              </div>
+            </div><!--end of row-->        
+          </div><!--end of container-->      
+        </section>
+
+        <section id="section7" class="height-100 cover cover-8 cover-full" style="">
+          <div class="container pos-vertical-center-ever">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements--title">
+                  <h5>Redes sociais</h5>
+                  <h6>Seu negócio possui perfil nas redes sociais?</h6>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements-forms">
+                  <!-- inpupt hidden -->
+                  <input type="hidden" name="i_Sociais">
+                  <!-- inpupt hidden -->
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-1">
+                      <div class="input-checkbox">
+                        <div class="inner"></div>
+                        <input type="checkbox" id="Facebook" class="" name="Facebook">
+                      </div>
+                    </div>
+                    <div class="col-xs-8">
+                      <label class="h6 mx-0" for="Facebook"><i class="icon--sm iconsmind-Facebook"></i> Facebook</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-1">
+                      <div class="input-checkbox">
+                        <div class="inner"></div>
+                        <input type="checkbox" id="Instagram" class="" name="Instagram">
+                      </div>
+                    </div>
+                    <div class="col-xs-8">
+                      <label class="h6 mx-0" for="Instagram"><i class="icon--sm iconsmind-Instagram"></i> Instagram</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row pagination-container">
+              <div class="col-xs-6">
+                <a href="#" class="_btn prev inner-link">
+                  <span class="h6 _btn__text"><i class="iconsmind-Left"></i> anterior</span>
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" class="_btn action-validate next inner-link">
+                  <span class="h6 _btn__text">próximo <i class="iconsmind-Right"></i></span>
+                </a>
+              </div>
+            </div><!--end of row-->        
+          </div><!--end of container-->      
+        </section>
+
+        <section id="section8" class="height-100 cover cover-8 cover-full" style="">
+          <div class="container pos-vertical-center-ever">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements--title">
+                  <h5>Horários de funcionamento</h5>
+                  <h6>
+                    <i class="iconsmind-Circle-Checkmark"></i>  <b>Marque</b> os dias que o estabelecimento funciona<br>
+                    <i class="iconsmind-Circle-O"></i> <b>Desmarque</b> os dias que estiver fechado
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements-forms">
+
+                  <!-- Segunda-feira -->
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-1 px-0">
+                      <div class="input-checkbox dia">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="Segunda-feira" data-dia="Segunda-feira" id="">
+                      </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 px-0">
+                      <label class="h6 mx-0" for="i_Segunda-feira">2ª feira</label>
+                    </div>
+                    <div class="co7-xs-6 c px-0ol-sm-7" data-horarios >
+                    </div>
+                  </div>
+
+                  <!-- Terca-feira -->
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-1 px-0">
+                      <div class="input-checkbox dia">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="Terca-feira" data-dia="Terca-feira" id="">
+                      </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 px-0">
+                      <label class="h6 mx-0" for="i_Terca-feira">3ª feira</label>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 px-0" data-horarios>
+                    </div>
+                  </div>
+
+                  <!-- Quarta-feira -->
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-1 px-0">
+                      <div class="input-checkbox dia">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="Quarta-feira" data-dia="Quarta-feira" id="">
+                      </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 px-0">
+                      <label class="h6 mx-0" for="i_Quarta-feira">4ª feira</label>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 px-0" data-horarios>
+                    </div>
+                  </div>
+
+                  <!-- Quinta-feira -->
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-1 px-0">
+                      <div class="input-checkbox dia">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="Quinta-feira" data-dia="Quinta-feira" id="">
+                      </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 px-0">
+                      <label class="h6 mx-0" for="i_Quinta-feira">5ª feira</label>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 px-0" data-horarios>
+                    </div>
+                  </div>
+
+                  <!-- Sexta-feira -->
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-1 px-0">
+                      <div class="input-checkbox dia">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="Sexta-feira" data-dia="Sexta-feira" id="">
+                      </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 px-0">
+                      <label class="h6 mx-0" for="i_Sexta-feira">6ª feira</label>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 px-0" data-horarios>
+                    </div>
+                  </div>
+
+                  <!-- Sabado -->
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-1 px-0">
+                      <div class="input-checkbox dia">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="Sabado" data-dia="Sabado" id="">
+                      </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 px-0">
+                      <label class="h6 mx-0" for="i_Sabado">Sábado</label>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 px-0" data-horarios>
+                    </div>
+                  </div>
+
+                  <!-- Domingo -->
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-1 px-0">
+                      <div class="input-checkbox dia">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="Domingo" data-dia="Domingo" id="">
+                      </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 px-0">
+                      <label class="h6 mx-0" for="i_Domingo">Domingo</label>
+                    </div>
+                    <div class="col-xs-7 col-sm-7 px-0" data-horarios>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="row pagination-container">
+              <div class="col-xs-6">
+                <a href="#" class="_btn prev inner-link">
+                  <span class="h6 _btn__text"><i class="iconsmind-Left"></i> anterior</span>
+                </a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" class="_btn action-validate next inner-link">
+                  <span class="h6 _btn__text">próximo <i class="iconsmind-Right"></i></span>
+                </a>
+              </div>
+            </div><!--end of row-->        
+          </div><!--end of container-->      
+        </section>
+
+        <section id="section9" class="height-100 cover cover-8 cover-full" style="">
+          <div class="container pos-vertical-center-ever">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements--title">
+                  <h5>Concordar e confirmar</h5>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="elements-forms">
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-1">
+                      <div class="input-checkbox confirmar">
+                        <div class="inner"></div>
+                        <input type="checkbox" name="aceitar" id="aceitar" class="validate-required">
+                      </div>
+                    </div>
+                    <div class="col-xs-10 col-sm-11">
+                      <label for="aceitar" class="h5 type--fine-print type--lowercase mx-0">Confirmo que todas as informações fornecidas são verdadeiras e concordo em publicá-las neste site de acordo com as <a href="/p/politicas-gerais.html" target="_blank"><b>Políticas Gerais</b> <i class="iconsmind-Link"></i> </a></label>
+                    </div>
+                  </div>
+                  <div class="row hidden">
+                    <div class="col-sm-6">
+                      <div class="form-group _confirm">
+                        <a type="button" class="btn btn--unfilled btn-block">Carregar informações</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row pagination-container hidden">
+                    <div class="col-xs-6">
+                      <a href="#" class="inner-link prev">
+                        <span class="h6 _btn__text"><i class="iconsmind-Left"></i> anterior</span>
+                      </a>
+                    </div>
+                    <div class="col-xs-6">
+                      <a href="#section10" class="inner-link next">
+                        <span class="h6 _btn__text">próximo <i class="iconsmind-Right"></i></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!--end of row-->    
+          </div><!--end of container-->      
+        </section>
+      </form>
+      
+      <section id="section10" class="height-100 cover cover-8 cover-full" style="">
+        <div class="container pos-vertical-center-ever">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="elements--title">
+                <h5>Seu card de apresentação do Ewbank Online: </h5>
+              </div>
+            </div>
+            <div id="card__demo" class="col-sm-6 col-md-4">
+            </div>
+            <div class="col-sm-12">
+              <div class="elements-forms">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <form action="https://formsubmit.co/bd9867ea04579f11d4778701553dbbbe" method="POST">
+                      <!-- Form Submit Honeypot -->
+                      <input type="text" name="_honey" style="display: none">
+                      <!-- Form Submit Captcha -->
+                      <input type="hidden" name="_captcha" value="false">
+                      <!-- Form Submit Redirect (Next) -->
+                      <span id="nextpage" style="display: none;">/p/cadastro-obrigado.html</span>
+                      <input id="nexturl" type="hidden" name="_next" value="">
+
+                      <input id="nameform" type="hidden" name="name">
+                      <input id="emailform" type="hidden" name="email">
+                      <div class="form-group submit">
+                        <button id='' type="submit" class="btn btn-block" data-wow-delay="0.2s">Enviar Cadastro</button>
+                      </div>
+                      <textarea id="messageform" name="message" class="" style="display: none;"></textarea>
+                    </form> 
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>
+          
+        </div> 
+      </section>
+      
+      <span class="hidden_select_txt" style="display: none;">
+        <label for="">Qual o tipo do seu negócio?</label>
+        <input type="text" name="Categoria-Tipo2" class="form-control input-md" placeholder="Tipo do seu negócio" alt="Campo de tipo de Comércio" title="Nome do tipo de Negócio" maxlength="30">
+      </span>
+    
+      <span class="hidden_card estabelecimento" style="display: none;">
+        <div class="card card-4 estabelecimento">
+          <!-- imagem de destaque -->  
+          <div class="card__image" style="display: flex;">
+            <img alt="Pic" class="Image free" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCA2MDAgMzAiPg0KICA8ZyBpZD0iQ2FtYWRhXzIiIGRhdGEtbmFtZT0iQ2FtYWRhIDIiPg0KICAgIDxnIGlkPSJDYW1hZGFfMS0yIiBkYXRhLW5hbWU9IkNhbWFkYSAxIj4NCiAgICAgIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iMzAiIHN0eWxlPSJmaWxsOiBub25lIi8+DQogICAgPC9nPg0KICA8L2c+DQo8L3N2Zz4NCg==">
+          </div> 
+          <div class="card__body boxed boxed--sm bg--white">
+    
+            <!-- endereço do estabelecimento -->
+            <h6 class="c__address"></h6>
+    
+            <!-- nome (empresa/estabelecimento) -->
+            <h5 class="c__name_i strong"></h5>
+    
+            <!-- categoria tipo -->
+            <h6 class="c__categoria_i text-left"></h6>
+    
+            <div class="card__title">        
+              <!-- telefones -->
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <h5 class="c__phone-whats" name="TelCelular"> <!-- sem walink -->
+                      <i class="iconsmind-fa-Whatsapp"></i><span>Inf.Indisponível</span>
+                    </h5>
+                  </div>
+                  <div class="col-xs-6">
+                    <h5 class="c__phone-tel" name="TelFixo">
+                      <i class="iconsmind-fa-Phone"></i><span>Inf.Indisponível</span>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- formas de pagamento -->
+              <ul class="icon-list">
+                <li name="Dinheiro"           class="" title="Dinheiro">              <i class="iconsmind-fa-Dollar"></i></li>
+                <li name="CartaoCredito"      class="" title="CartaoCredito">         <i class="iconsmind-fa-Credit-Card"></i></li>
+                <li name="CartaoDebito"       class="" title="CartaoDebito">          <i class="iconsmind-fa-Credit-Card flip-horizontal"></i></li>
+                <li name="Pix"                class="" title="Pix">                   <i class="iconsmind-fa-Pix"></i></li>
+                <li name="MercadoPagoQRCode"  class="" title="Mercado Pago QR Code">  <i class="iconsmind-fa-QR-Code"></i></li>
+                <li name="PicPay"             class="" title="PicPay">                <i class="iconsmind-fa-Picpay"></i></li>
+                <li name="PagamentosOnline"   class="" title="Pagamentos Online">     <i class="iconsmind-fa-Bitcoin"></i></li>
+              </ul>
+    
+              <div style="clear: both;"></div>
+            </div>
+            <hr>
+            <div class="card__lower">
+              <!-- categoria tipo 2 -->
+              <span class="h6 c__categoria_i2"></span>
+              <!-- categoria -->
+              <a href="/search/label/estabelecimento">
+                <h6 class="text-left c__categoria"></h6>
+              </a>
+    
+              <!-- redes sociais -->
+              <ul class="social-list pull-right">
+                <li class="disabled" name="Facebook">   <i class="iconsmind-fa-Facebook"> </i></li>
+                <li class="disabled" name="Instagram">  <i class="iconsmind-fa-Instagram"></i></li>
+              </ul>
+    
+              <div style="clear: both;"></div>
+              <a class="modal-trigger modal-info" href="#" data-modal-index="3">
+                <span class="h6 strong">mais info + </span>
+              </a>
+    
+              <!-- horarios -->
+              <div class="c__horarios" style="display: none;">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-xs-6" name="Segunda-feira"  >Segunda-feira</div> 
+                    <div class="col-xs-6" name="Segunda-feira" data-dia="Segunda-feira"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6" name="Terca-feira"    >Terca-feira</div>
+                    <div class="col-xs-6" name="Terca-feira" data-dia="Terca-feira"  ></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6" name="Quarta-feira"   >Quarta-feira</div>
+                    <div class="col-xs-6" name="Quarta-feira" data-dia="Quarta-feira" ></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6" name="Quinta-feira"   >Quinta-feira</div>
+                    <div class="col-xs-6" name="Quinta-feira" data-dia="Quinta-feira" ></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6" name="Sexta-feira"    >Sexta-feira</div>
+                    <div class="col-xs-6" name="Sexta-feira" data-dia="Sexta-feira"  ></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6" name="Sabado"         >Sabado</div>
+                    <div class="col-xs-6" name="Sabado" data-dia="Sabado"       ></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6" name="Domingo">Domingo</div>
+                    <div class="col-xs-6" name="Domingo" data-dia="Domingo"      ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c__keywords" style="display: none;">
+            
+          </div>    
+          <div class="c__ratings" style="display: none;">
+            <!-- widgetpack.com -->
+          </div>
+        </div>
+      </span>
+      
+      <span class="hidden_select_horarios" style="display: none">
+        <div class="campos horarios">
+          <select name="abre" title="Informe o horário de abertura">
+            <option value="" readonly >Abre</option>
+            <option value="01:00">01:00</option>
+            <option value="02:00">02:00</option>
+            <option value="03:00">03:00</option>
+            <option value="04:00">04:00</option>
+            <option value="05:00">05:00</option>
+            <option value="06:00">06:00</option>
+            <option value="07:00">07:00</option>
+            <option value="08:00">08:00</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+            <option value="21:00">21:00</option>
+            <option value="22:00">22:00</option>
+            <option value="23:00">23:00</option>
+            <option value="00:00">00:00</option>
+          </select>
+          &nbsp;
+          <select name="fecha" title="Informe o horário de encerramento">
+            <option value="" readonly >Fecha</option>
+            <option value="01:00">01:00</option>
+            <option value="02:00">02:00</option>
+            <option value="03:00">03:00</option>
+            <option value="04:00">04:00</option>
+            <option value="05:00">05:00</option>
+            <option value="06:00">06:00</option>
+            <option value="07:00">07:00</option>
+            <option value="08:00">08:00</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+            <option value="21:00">21:00</option>
+            <option value="22:00">22:00</option>
+            <option value="23:00">23:00</option>
+            <option value="00:00">00:00</option>
+          </select>
+        </div>
+      </span>
+      
+    </div>
+    <script type="text/javascript">
+      var uri = window.location;
+      document.getElementById('nextpage').value = uri.protocol + '//' + uri.host + '/p/cadastro-obrigado.html';
+    </script>
+    
+    <script src="themes/pillar/plugins/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="themes/pillar/plugins/lightbox/js/lightbox.min.js" type="text/javascript"></script>
+    <script src="themes/pillar/plugins/smooth-scroll/js/smooth-scroll.min.js" type="text/javascript"></script>
+    <script src="themes/pillar/plugins/scrollreveal/js/scrollreveal.min.js" type="text/javascript"></script>
+    <script src="themes/pillar/plugins/maskedinput/js/jquery.maskedinput_1.4.1.min.js" type="text/javascript"></script>
+    <script src="themes/pillar/js/scripts.js" type="text/javascript"></script>
+    <script src="themes/pillar/js/formularios_html.1.2.4.js" type="text/javascript"></script>
+    <script src="themes/pillar/js/related-cards.1.2.0.js" type="text/javascript"></script>
+
+  </body>
 </html>
+
+<!-- section matriz -->
+<!-- <section id="section" class="height-100 cover cover-8 cover-full" style="">
+  <div class="container pos-vertical-center-ever">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="elements--title">
+          <h5>Titulo</h5>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="elements-forms">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="row pagination-container">
+      <div class="col-xs-6">
+        <a href="#section" class="_btn prev inner-link">
+          <span class="h6 _btn__text"><i class="iconsmind-Left"></i> anterior</span>
+        </a>
+      </div>
+      <div class="col-xs-6">
+        <a href="#section" class="_btn action-validate next inner-link">
+          <span class="h6 _btn__text">próximo <i class="iconsmind-Right"></i></span>
+        </a>
+      </div>
+    </div> /end of row 
+
+  </div> /end of container     
+</section> -->
