@@ -10,7 +10,7 @@
 // 'c__categoria'        // 'c__categoria'     // 'c__categoria'
 // 'c__categoria-tipo'   // ''                 // 'c__categoria-tipo' (funcao)
 // pagtos                // pagtos             // pagtos
-// sociais               // sociais            // sociais 
+// sociais               // sociais            // sociais
 // horarios              // horarios           / horarios
 
 // ! VALIDATE
@@ -34,7 +34,7 @@ $(document).ready(function(){
 					/*Mostrar Mensagem de validação*/
 					// $('.validate_message').html(validateRequiredMsg);
 					/*Estado da validação*/
-					validateState = false; 
+					validateState = false;
 					return false;
 				}
 				else {
@@ -50,7 +50,7 @@ $(document).ready(function(){
 		// ! NAVIGATION
 		var innerPageLink = $("a.inner-link");
     $('section:nth-of-type(1)').find('.validate-required').attr('required', 'required');
-    
+
     innerPageLink.each(function() {
       // $(this).css('color', 'red');
       var link            = $(this);
@@ -64,8 +64,8 @@ $(document).ready(function(){
       if($(this).hasClass('prev')) {
         // ocultar todas as sections com elementos prev
         $(this).closest('section').css('opacity', '0');
-        
-        var hash = '#' + hrefPrev;    
+
+        var hash = '#' + hrefPrev;
         $(this).attr('href', hash);
 
         $(this).on('click', function() {
@@ -74,20 +74,27 @@ $(document).ready(function(){
         });
       }
       else if($(this).hasClass('next')) {
-        $(this).on('click', function(e) {        	
+        $(this).on('click', function(e) {
           validate();
           if(validateState == true) {
             var hash = '#' + hrefNext;
             $(this).attr('href', hash);
             section.css('opacity', '0') && section.find('.validate-required').removeAttr('required');
             next_section.css('opacity', '1');
-            next_section.find('.validate-required').attr('required','required');                
+            next_section.find('.validate-required').attr('required','required');
           }
           else {
             e.preventDefault()
             section.css('opacity', '1');
           }
-        });  
+        });
+      }
+      else {
+        $(this).on('click', function(e) {
+          section.css('opacity', '0');
+          var hash = $(this).attr('href');
+          $(hash).css('opacity', '1');
+        });
       }
     });
     $('#aceitar').parent('.input-checkbox').on('click', function() {
@@ -101,10 +108,10 @@ $(document).ready(function(){
 				var fNome       = $('#i_Nome').val();
 				var fEmail 			= $('#i_Email').val();
 				var fAddress    = $('#i_Endereco').val();
-				var fTelFixo    = $('#i_TelFixo').val();       
-				var fTelWhats   = $('#i_TelCelular').val();    
+				var fTelFixo    = $('#i_TelFixo').val();
+				var fTelWhats   = $('#i_TelCelular').val();
 				var fNome_i     = $('#i_Nome_i').val();
-				var fCateg      = $(this).parents('form').attr('data-form'); 
+				var fCateg      = $(this).parents('form').attr('data-form');
 				var fCateg_i    = $('#i_Categoria-Tipo').val();
 				var fCateg_i2   = $('#i_Categoria-Tipo2').val();
 
@@ -144,13 +151,13 @@ $(document).ready(function(){
 				} else {
 					$('.hidden_card').find('.c__phone-tel').removeClass('hidden');
 				}
-				// FORMAT TEL WHATSAPP LINK 
+				// FORMAT TEL WHATSAPP LINK
 				var fTelWhats = fTelWhats.replace(/\D/g, '');
 				var walink 		= 'https://wa.me/send/?phone=' + fTelWhats + '&text=:%20Ol%C3%A1,%20tudo%20bem?';
 
 				$('.c__phone-whats a').attr({'href': walink, 'rel': 'nofollow', 'target': '_blank'});
 
-				// EMAIL 
+				// EMAIL
 				$('')
 			});
 			// return this;
@@ -180,7 +187,7 @@ $(document).ready(function(){
 			if(validateState) {
 				$('.form-group.submit').fadeIn();
 				$('.form-group.confirm').fadeOut();
-				preencheCard(); 
+				preencheCard();
 			};
 		}
 
@@ -203,17 +210,17 @@ $(document).ready(function(){
 		var checkBoxdia     = $(".input-checkbox.dia");
 		var checkBoxPagto   = $(".input-checkbox.pagto");
 		var checkBoxSocial  = $(".input-checkbox.social");
-		
+
 		//NOVO: todos os checkbox
 		checkbox.each(function() {
 
 			var x = $(this).attr('name');
-			var y = $('.hidden_card').find('[name="' + x + '"]');       // y.parent not .c__horarios 
+			var y = $('.hidden_card').find('[name="' + x + '"]');       // y.parent not .c__horarios
 			// var z = $('.hidden_card').find('[data-dia="' + x + '"]');
 			var zS = $('.hidden_card.servicos').find('[data-dia="' + x + '"]');
 			var zD = $('.hidden_card.delivery').find('[data-dia="' + x + '"]');
 			var zE = $('.hidden_card.estabelecimento').find('[data-dia="' + x + '"]');
-			
+
 			zS.text('Indisponível');
 			zD.text('Fechado');
 			zE.text('Fechado');
@@ -228,7 +235,7 @@ $(document).ready(function(){
 			$(this).parent('.input-checkbox').on('click', function(){
 				y.toggleClass('eneabled disabled');
 			});
-			
+
 		});
 
 		// Montar endereço
@@ -246,7 +253,7 @@ $(document).ready(function(){
 			$('#i_Endereco').val(result);
 		})
 
-		// se o tNao for selecionado: 
+		// se o tNao for selecionado:
 		/* tInput limpa validacao + wInput fica validate-required + wSim .checked + wNao .unchecked
 				ou #w_options hide() + #w_alert show() + wInput validate-required + tInput limpa validate
 		*/
@@ -255,13 +262,13 @@ $(document).ready(function(){
 		// se o wSim for clicado wInput fica validate-required e required
 
 
-		// [i_TelFIxo + i_TelCelular] PILLAR INPUT RADIO 
+		// [i_TelFIxo + i_TelCelular] PILLAR INPUT RADIO
 
 		$('.input-radio.CheckTel').on('click', function() {
 			var tNao 		= $('.input-radio[data-name="tNao"]');
 			var tSim		= $('.input-radio[data-name="tSim"]');
 			var wNao		= $('.input-radio[data-name="wNao"]');
-			var wSim		= $('.input-radio[data-name="wSim"]');			
+			var wSim		= $('.input-radio[data-name="wSim"]');
 
 			var thisInput	= $(this).closest('.row').find('input[type="tel"]');
 			var t_input 	= $('#i_TelFixo');
@@ -314,7 +321,7 @@ $(document).ready(function(){
 		checkBoxdia.each(function() {
 			var div_horarios 	= $('.hidden_select_horarios').html();
 			var dia = $(this).find('input[type="checkbox"]').attr('data-dia');
-			
+
 			// definir id;
 			$(this).attr({id: 'h_' + dia}); // => <div class="input-checkbox" id="h_Segunda-feira
 
@@ -323,7 +330,7 @@ $(document).ready(function(){
 				if ($(this).hasClass('checked')) {
 					// inserir o html com os selects de horarios:
 					$(this).closest('.row').find('[data-horarios]').append(div_horarios);
-					
+
 					// definir selects para 'required':
 					$('[data-horarios] div.horarios > select').attr({
 						'class': 'validate-required',
@@ -343,7 +350,7 @@ $(document).ready(function(){
 						// definir id e valores selecionados ao input checkbox com html:
 						$(this).parent().find("input[type='checkbox']").attr({
 							id: 'h_' + dia
-						});        
+						});
 
 					});
 
@@ -361,7 +368,7 @@ $(document).ready(function(){
 					$(this).closest('.row').find('[data-horarios] > div').remove();
 
 				};
-			});				
+			});
 		});
 
 		// Sempre que o formulário for modificado
@@ -375,14 +382,14 @@ $(document).ready(function(){
 		$('#i_Categoria-Tipo').on('change', function() {
 
 			desmarcar();
-						
+
 			var ct2_div 		= $('.Categoria-Tipo2');
-			
+
 			var ytxt 				= $('.hidden_select_txt').html();
 			var ytx1				= $('.hidden_select_tx1').html();
 			var yfem 				= $('.hidden_select_fem').html();
 			var ymsc				= $('.hidden_select_msc').html();
-			
+
 			ct2_div.empty().hide();
 
 
@@ -401,14 +408,14 @@ $(document).ready(function(){
 			else {
 				ct2_div.empty().hide();
 			}
-			
+
 			var ct2_input 	= $('.Categoria-Tipo2').find('input[name="Categoria-Tipo2"]');
 
 			ct2_input.addClass('validate-required').attr({
 				'required':'required',
 				'id': 'i_Categoria-Tipo2'
 			});
-      			
+
 		});
 
 		$('.confirmar').on('click', function() {
@@ -428,7 +435,7 @@ $(document).ready(function(){
 			}
 			// preencher nome
 			$('#nomeform').val($('#i_Nome').val());
-			// preencher email 
+			// preencher email
 			if($.trim($('#i_Email').val()) == '') {
 				var randomEmail = letters() + Math.floor((Math.random() * 1000)) + '@blogger.com';
 				$('#emailform').val(randomEmail);
@@ -451,4 +458,3 @@ $(document).ready(function(){
 	$("#i_TelCelular").mask("(32) 99999-9999");
 
 });
-
