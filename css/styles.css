@@ -1,0 +1,18 @@
+section {
+  transition: opacity ease-in-out 1000ms;
+}
+.inner-link span {
+  font-weight: 700;
+}
+.horarios select {
+  margin-bottom: 0.625em;
+  height: 36px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.horarios {
+  transition: height ease-in-out 1500ms;
+}
+#card__demo .card {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.075);
+}
