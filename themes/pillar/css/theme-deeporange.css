@@ -1677,7 +1677,7 @@ input[type="submit"] {
   background: none;
   outline: none;
   border: none;
-  background: #ff6633;
+/*  background: #ff6633;*/
   padding: 0.8125em 3.25em 0.8125em 3.25em;
   color: #fff;
 }
